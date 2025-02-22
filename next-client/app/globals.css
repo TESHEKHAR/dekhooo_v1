@@ -2,9 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Glitten';
+  src: url('../public/Fonts/Glitten-Regular.otf') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SfPro';
+  src: url('../public/Fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SfPro';
+  src: url('../public/Fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+  font-weight: 300;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --Font-Main : 'Glitten', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,7 +34,19 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'SfPro';
+}
+.glitter
+{
+  font-family: 'Glitten';
+}
+
+li{
+  list-style-type: none;
+  font-family: 'SfPro';
+  font-weight: lighter;
+  font-size: 18px;
+}
+li.active > a{
+border-bottom: 1px solid #993a3a;  
 }
